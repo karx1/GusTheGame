@@ -9,5 +9,3 @@ def main():
     HerrVille(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE, arcade.color.GRAY)
     arcade.run()
 
-if __name__ == "__main__":
-    main()
