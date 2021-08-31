@@ -6,6 +6,7 @@ class HerrVille(Interface):
         super().on_draw()
 
 def main():
-    HerrVille(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE, arcade.color.GRAY)
+    window = HerrVille(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE, arcade.color.GRAY)
+    window.setup()
     arcade.run()
 
