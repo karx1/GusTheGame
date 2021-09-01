@@ -33,9 +33,10 @@ class HerrVille(Interface):
             self.npc_list.append(npc)
 
     def on_draw(self):
-        super().on_draw()
-
+        arcade.start_render()
+        self.camera_sprites.use()
         self.npc_list.draw()
+        super().on_draw()
     
     def on_update(self, delta_time):
         super().on_update(delta_time)
