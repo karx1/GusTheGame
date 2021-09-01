@@ -36,6 +36,19 @@ class HerrVille(Interface):
         super().on_draw()
 
         self.npc_list.draw()
+    
+    def on_update(self, delta_time):
+        super().on_update(delta_time)
+
+        self.npc_list.update()
+
+        hit_list = arcade.check_for_collision_with_list(self.player_sprite, self.npc_list)
+
+        if len(hit_list) == 0:
+            self.set_text("")
+        else:
+            for npc in hit_list:
+                self.set_text(npc.interacted_text)
 
 def main():
     window = HerrVille()

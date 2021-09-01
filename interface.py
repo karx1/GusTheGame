@@ -38,6 +38,9 @@ class Interface(arcade.Window):
         arcade.draw_lrtb_rectangle_filled(
             0, self.width, self.height / 3, 0, arcade.color.BLACK
         )
+
+        if not self.interacted_text == "":
+            arcade.draw_text(f"* {self.interacted_text}", 50, SCREEN_HEIGHT * (1 / 3) - 50, arcade.color.WHITE, DEFAULT_FONT_SIZE)
         self.player_list.draw()
 
     def on_update(self, delta_time):
